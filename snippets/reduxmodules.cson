@@ -1,0 +1,69 @@
+'.source.js.jsx':
+
+  'create redux-module':
+    prefix: 'rmcre'
+    body: '''
+      import { createModule } from 'redux-modules';
+
+      const module = createModule({
+        name: $1,
+        initialState: $2:{},
+        transformations: {
+          $3
+        },
+      });
+
+      export default module;
+    '''
+
+    'create transformation':
+      prefix: 'rmtr'
+      body: '''
+        $1: (state, { payload }) => $2,
+      '''
+
+    'import connect module':
+      prefix: 'rmiconn'
+      body: '''
+        import { connectModule } from 'redux-modules';
+      '''
+    'import module provider':
+      prefix: 'rmimod'
+      body: '''
+        import { ModuleProvider } from 'redux-modules';
+      '''
+
+    'bootstrap module provider':
+      prefix: 'rmprov'
+      body: '''
+        import React, { Component } from 'react';
+        import { ModuleProvider } from 'redux-modules';
+        import { createStore } from 'redux';
+
+        export default class $1 extends Component {
+          render() {
+            return (
+              <ModuleProvider store={createStore()}>
+                $2
+              </ModuleProvider>
+            );
+          }
+        }
+      '''
+
+      'bootstrap connected component':
+        prefix: 'rmcom'
+        body: '''
+          import React, { Component } from 'react';
+          import { connectModule } from 'redux-modules';
+          import $1 from '$2';
+
+          @connectModule($1)
+          export default class $3 extends Component {
+            render() {
+              return (
+                $4
+              );
+            }
+          }
+        '''

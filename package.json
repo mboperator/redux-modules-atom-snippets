@@ -1,0 +1,11 @@
+{
+  "name": "redux-modules-atom-snippets",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "url": "git@github.com:mboperator/redux-modules-atom-snippets.git",
+    "type": "git"
+  },
+  "author": "Marcus Bernales <mboperator@gmail.com>",
+  "license": "MIT"
+}
