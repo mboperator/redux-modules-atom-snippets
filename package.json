@@ -8,10 +8,7 @@
     "react",
     "snippets"
   ],
-  "repository": {
-    "url": "git@github.com:mboperator/redux-modules-atom-snippets.git",
-    "type": "git"
-  },
+  "repository": "https://github.com/mboperator/redux-modules-atom-snippets",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
