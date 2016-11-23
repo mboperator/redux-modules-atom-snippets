@@ -1,6 +1,6 @@
 {
   "name": "redux-modules-atom-snippets",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "redux-module snippets for Atom",
   "keywords": [
     "redux",
